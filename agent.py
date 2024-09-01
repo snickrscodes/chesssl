@@ -13,7 +13,7 @@ import os
 
 
 os.environ['KERAS_BACKEND'] = 'tensorflow'
-keras.utils.set_random_seed(6132024)
+keras.utils.set_random_seed(42)
 NUM_INPUTS = 41024 # 64*(64*10+1)
 CHKPT_DIR = 'C:/Users/saraa/Desktop/chessai/checkpoints/'
 TRAINING_DIR = 'C:/Users/saraa/Desktop/chessai/training_data/'
@@ -394,6 +394,3 @@ def play(bot1: Bot, bot2: Bot, depth=1, n_games=100):
                 l += 1
         game.reset()
     print_bar(w, d, l)
-
-bot = Bot()
-bot.train_loop()
